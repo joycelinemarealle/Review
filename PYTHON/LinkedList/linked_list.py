@@ -31,11 +31,10 @@ class LinkedList:
             return
 
         itr = self.head #if not none then not at the end . iterate until reach end
-        while itr.next: #if there is nexr
+        while itr.next: #if there is next
             itr = itr.next
-
             #when itr.next is none then
-        itr .next = Node(data, None)
+        itr.next = Node(data, None)
 
     def insert_values(self, data_list):
         self.head = None
@@ -52,17 +51,51 @@ class LinkedList:
 
     def remove_at(self,index):
         if index < 0 or index >= self.get_length():
-            raise Exception("Invali index")
-        if index == 0 :
+            raise Exception("Invalid index")
+        if index == 0 : #check condition if want to remove the head
             self.head = self.head.next
             return
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index -1 : #stop element before the index
+                itr.next = itr.next.next
+                break
+            itr = itr.next
+            count +=1
+
+    def insert_at(self,index,data):
+        if index < 0 or index > self.get_length():
+            raise Exception ("Invalid Index")
+
+        if index == 0:
+            self.insert_at_begining(data)
+            return
+        #for other cases
+        #initialize count
+        count = 0
+        itr = self.head #reference first node
+
+        while itr:
+            if count == index -1: #need to modify pointer of previous element before index
+               node = Node (data,itr.next ) #create a node next is my previous next
+               itr.next = node
+               break
+
+            itr = itr.next # each element through list
+            count += 1 #increment count
+
+
 
 if __name__ == '__main__':
     ll = LinkedList()
- #   ll.insert_at_begining(5)
- #   ll.insert_at_begining(89)
-  #  ll.insert_at_end(79)
-    ll.insert_values(["a", "b", "c"])
+    #   ll.insert_at_begining(5)
+    #   ll.insert_at_begining(89)
+    #  ll.insert_at_end(79)
+    ll.insert_values(["a", "b", "c", "d"])
     ll.print()
     #print('length', ll.get_length())
-    ll.remove
+    # ll.remove_at(2)
+    ll.insert_at(2, "e")
+    ll.insert_at(0, "g")
+    ll.print()
