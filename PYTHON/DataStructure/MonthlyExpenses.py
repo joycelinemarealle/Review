@@ -28,11 +28,11 @@ print()
 
     #loop through first 3 keys and sum
 sum = 0
-count = 0
+current_index = 0
 for i in Ks:
-    count += 1
+    current_index += 1
     sum += expense1[i]
-    if count == 3 :
+    if current_index == 3 :
         break
 print("The first quarter expense :$", sum)
 print()
