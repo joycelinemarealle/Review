@@ -112,9 +112,10 @@ class LinkedList:
             return
         #Condition #2 if data == self.head.data
         if self.head.data == data:
-            self.head = self.head.next #removed 1st node now head is the node previously next to head
+            self.head = self.head.next #removed 1st node now 2nd node is head
+            return
 
-        #Other conditions
+        #Removing nodes that is not head
         current_node = self.head
 
         while current_node:
@@ -130,8 +131,14 @@ class LinkedList:
 
 if __name__ == '__main__':
     ll = LinkedList()
-    ll.insert_values(["a", "b", "c", "d", "e"])
-    ll.insert_after_value("b", "f")
-    ll.remove_by_value("b")
+    ll.insert_values(["banana", "mango", "grapes", "orange"])
+    ll.insert_after_value("mango", "apple") #insert apple after mango
     ll.print()
+    ll.remove_by_value("orange") #remove orange from list
+    ll.print()
+    ll.remove_by_value("mango")
+    ll.print()
+    ll.remove_by_value("banana")
+    ll.print()
+
 
