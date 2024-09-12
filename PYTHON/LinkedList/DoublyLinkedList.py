@@ -18,7 +18,7 @@ class DoublyLinkedList:
 
         def insert_at_end(self, data):
             if self.head is None:  # If the list is empty
-                self.head = Node(data)  # The new node becomes the head
+                self.head = Node(data, None, None)  # The new node becomes the head
                 return
 
             # If the list is not empty, traverse to the last node
