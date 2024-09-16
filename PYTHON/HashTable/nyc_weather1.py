@@ -1,4 +1,4 @@
-#the array List data structure works
+#The array List data structure works
 #need to open file
 #split and save the second part of element which is data
 #analyze data in array
@@ -13,7 +13,7 @@ with open('nyc_weather.csv', 'r') as csvfile:
     next(csvfile) #skips the header line
     for line in csvfile:
         data = line.split(',')
-        temp = float(data[1])
+        temp = int(data[1])
         weather_data.append(temp)
 print(weather_data)
 
