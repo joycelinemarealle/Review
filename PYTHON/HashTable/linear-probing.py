@@ -30,7 +30,7 @@ class Hash_Table:
         start_hash = hash_val
         #if slot occupied
         while self.array[hash_val] is not None:
-            hash_val = (start_hash +1) % self.Max #circular array prevent out or bound
+            hash_val = (hash_val +1) % self.Max #circular array prevent out or bound
         #after loop and back to original
         if start_hash == hash_val:
             raise Exception ("HashTable is full")
