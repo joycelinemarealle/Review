@@ -10,11 +10,14 @@ class TreeNode :
 
 
     def print_tree(self, level):
+        #if current node level > than level I care about stop recursion
         if self.get_level() > level:
-            return
+            return #stop
         spaces = ' ' * self.get_level() * 3
         prefix = spaces + "|__" if self.parent else ""
         print(prefix + self.location)
+
+        #print children of the node
         if self.children:
             for child in self.children:
                 child.print_tree(level)
