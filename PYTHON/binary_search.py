@@ -1,5 +1,3 @@
-from xlwings.mac_dict import elements
-
 
 class BinarySearchTreeNode:
     def __init__(self,data):
