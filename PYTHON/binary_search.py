@@ -44,14 +44,14 @@ class BinarySearchTreeNode:
         # might be on left tree
         if val < self.data:
             if self.left:
-                self.left.search(val) #recursively check if have left
+                return self.left.search(val) #recursively check if have left
             else:
                 return False
 
         # might be on right tree
         if val > self.data:
             if self.right:
-                self.right.search(val) #recursively check if have right
+                return self.right.search(val) #recursively check if have right
             else:
                 return False
 
