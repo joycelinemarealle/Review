@@ -18,4 +18,4 @@ def longest_substring_with_k_distinct(str,k):
         while len(cj)
         #do something
     #if more than k:
-    #track lenght
+    #track lenght //
