@@ -27,6 +27,6 @@ def longest_substring_with_k_distinct(str,k):
         max_length = max(max_length, window_end-window_start +1)
     return max_length
 if __name__ == '__main__':
-    str =["araaci"]
+    str ="araaci"
     k = 2
     print (longest_substring_with_k_distinct(str,k))
