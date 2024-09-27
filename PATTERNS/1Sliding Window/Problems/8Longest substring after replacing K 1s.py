@@ -1,7 +1,6 @@
 def length_longest_substring(arr,k):
     #1 Initialization of variables
     window_start, max_length , max_ones_count = 0,0,0
-    num_freq = {}
 
     #2 sliding the window
     for window_end in range (len(arr)):
