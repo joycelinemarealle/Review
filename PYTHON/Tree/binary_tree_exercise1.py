@@ -130,10 +130,48 @@ class BinarySearchTreeNode:
         else:
             return self.right.find_max()
 
+    def delete(self, val):
+        #need to call left and right subtree until reach node to be deleted
+        #left subtree
+        if val < self.data:
+            if self.left is not None:
+                self.left = self.left.delete(val) #assign the val
+            else:
+                return None
+#vist right subtree
+        elif val > self.data:
+            if self.right is not None: #exist right node
+                self.right = self.right.delete(val) #assign right node with fucntion
+            else:
+                return None
+
+        #at val to be deleted
+        #3 scenarios : leaf, 1 child , two child
+        #leaf
+        else:
+            if self.right is None and self.left is None:
+                return None
+            #1 child
+            if self.right is None:
+                return self.left
+            if self.left is None:
+                return self.right
+
+            #if both children
+            #find max in left tree of current node
+            max_val = self.left.find_max()
+
+            #replace current node with min_val
+            self.right = max_val
+
+            #delete duplicate of min_val and return new right subtree
+            self.left = self.left.delete(max_val)
+
+            return self
 
 
 
-def build_helper(elements):
+def build_tree(elements):
     root = BinarySearchTreeNode(elements[0])
 
     for i in range(1, len(elements)):
