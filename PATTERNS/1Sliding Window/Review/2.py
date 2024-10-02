@@ -1,25 +1,23 @@
-import math
+def max_sum_of_subarray(arr,k):
+    #1 Initialization
+    window_start, max_sum , window_sum = 0,0,0
+    
+    #2 Slide window
+    for window_end in range ( len(arr)):
+        window_sum += arr[window_end]
 
-def smallest_length_substring_with_sum(arr,s):
-    # Initialization
-    window_start, window_sum, min_length = 0,0,math.inf
+        #3 Shrink window
+        if window_end-window_start +1 >= k:
+            #4 track max window_sum
+            max_sum = max(max_sum, window_sum)
 
-    #Sliding window
-    for window_end in range (len(arr)):
-        window_sum += arr[window_end] #add next element
-
-        #shrink window as small as possible until window_sum is smaller than s
-        while window_sum >= s: #as long as condition met keep doing below
-            #track length see if minimum
-            min_length = min (min_length,window_end-window_start+1)
-            #minus element from sum
+            #minus element going out
             window_sum -= arr[window_start]
-            window_start+=1 #slide ahead
-    if min_length == math.inf:
-        return 0
-    return min_length
+
+            #move window ahead
+            window_start +=1
+    return max_sum
 
 if __name__ == '__main__':
-    print(smallest_length_substring_with_sum([2,1,5,2,3,2],7))
-    print(smallest_length_substring_with_sum([2,1,5,2,8],7))
-    print(smallest_length_substring_with_sum([3,4,1,1,6], 8))
+    print(max_sum_of_subarray([2,1,5,1,3,2],3))
+    print(max_sum_of_subarray([2,3,4,1,5],2))
