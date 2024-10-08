@@ -19,7 +19,7 @@ def longest_substring_after_replacement(str,k):
         max_repeated_letter_count = max(max_repeated_letter_count, char_freq[right_char])
 
         #4 Shrink window when remaining char to be replaced > k
-        while (window_end -window_start +1 - max_repeated_letter_count) > k:
+        while (window_end -window_start +1 - max_repeated_letter_count) > k: #shrink once
             #rebalance hashmap
             left_char = str[window_start]
             char_freq[left_char] -=1
