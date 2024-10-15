@@ -1,7 +1,7 @@
 heroes = [ "spider man", "thor", "hulk", "iron man", "captain america"]
 
 
-#1. Length of the list
+#1.py. Length of the list
 print("Length of heroes list is ", len(heroes))
 
 #2. Add 'black panther' at the end of this list

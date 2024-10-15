@@ -1,6 +1,6 @@
 
 def list_starting_indices_of_anagrams(str, pattern):
-    #1 Initialization
+    #1.py Initialization
     window_start, matched = 0,0
     char_freq = {}
 
@@ -26,7 +26,7 @@ def list_starting_indices_of_anagrams(str, pattern):
         if matched == len(pattern) :
             result_indices.append(window_start)#return list of starting indices
     #6 shrink window
-        if window_end >= len(pattern) -1: #(window_start-window_end+1 >= len(pattern)
+        if window_end >= len(pattern) -1: #(window_start-window_end+1.py >= len(pattern)
             left_char= str[window_start]
             window_start +=1
             if left_char in char_freq:

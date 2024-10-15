@@ -87,7 +87,7 @@ class LinkedList:
 
     def insert_after_value(self, data_after, data_to_insert):
 
-        #Condition #1 if linkedlist is empty
+        #Condition #1.py if linkedlist is empty
         if self.head is None:
             return
 
@@ -107,7 +107,7 @@ class LinkedList:
 
     def remove_by_value(self, data):
 
-        #Condition #1 if linkedlist empty
+        #Condition #1.py if linkedlist empty
         if self.head is None:  #if ist node empty
             return
         #Condition #2 if data == self.head.data

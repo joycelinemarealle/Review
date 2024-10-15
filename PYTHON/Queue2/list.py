@@ -15,6 +15,6 @@ print(wmt_stock_price_queue.pop())
 
 #issues with dynamic array.
 # If location run out ,
-#   1)need to allocate new space and
+#   1.py)need to allocate new space and
 #   2)the  copy all info to new location
 

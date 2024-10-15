@@ -1,5 +1,5 @@
 def max_fruits_in_basket(fruits):
-    #1 Initialization
+    #1.py Initialization
     window_start = 0
     max_length = 0
     fruit_freq = {}

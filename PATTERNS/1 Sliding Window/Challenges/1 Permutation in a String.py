@@ -1,5 +1,5 @@
 def find_permutation(str, pattern):
-    #1 initialization
+    #1.py initialization
     window_start, matched = 0, 0
     char_freq = {}
 
@@ -22,7 +22,7 @@ def find_permutation(str, pattern):
             return True
 
         #4 Shrink window #if pattern
-        if window_end >= len(pattern) -1: #window stars from zero so len-1
+        if window_end >= len(pattern) -1: #window stars from zero so len-1.py
             left_char = str[window_start]
             window_start += 1
 

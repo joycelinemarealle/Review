@@ -146,12 +146,12 @@ class BinarySearchTreeNode:
                 return None
 
         #at val to be deleted
-        #3 scenarios : leaf, 1 child , two child
+        #3 scenarios : leaf, 1.py child , two child
         #leaf
         else:
             if self.right is None and self.left is None:
                 return None
-            #1 child
+            #1.py child
             if self.right is None:
                 return self.left
             if self.left is None:

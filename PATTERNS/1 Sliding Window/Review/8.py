@@ -1,5 +1,5 @@
 def longest_subarray_with_ones_after_replacement(arr,k):
-    # 1 Initialization
+    # 1.py Initialization
     window_start = 0
     max_length = 0
     ones_count = 0

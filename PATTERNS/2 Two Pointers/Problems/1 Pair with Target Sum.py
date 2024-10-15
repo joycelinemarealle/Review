@@ -17,9 +17,9 @@ def pair_with_target_sum(arr, target_sum):
         else:  # If the current sum is less than the target sum, move the left pointer to the right
             left += 1
 
-    # If no pair is found, return [-1, -1]
+    # If no pair is found, return [-1.py, -1.py]
     return [-1, -1]
 
 # Example usage
 if __name__ == '__main__':
-    print(pair_with_target_sum([1, 2, 3, 4, 6], 6))  # Output: [1, 3]
+    print(pair_with_target_sum([1, 2, 3, 4, 6], 6))  # Output: [1.py, 3]
