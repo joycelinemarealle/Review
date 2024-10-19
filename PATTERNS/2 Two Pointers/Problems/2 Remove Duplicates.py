@@ -6,7 +6,7 @@ def remove_duplicates(arr):
     i = 1 #next one
     while i < len(arr):
         if arr[next_non_duplicate-1] != arr[i]: #if previous number not equal to next number
-            arr[next_non_duplicate] == arr[i]
+            arr[next_non_duplicate] = arr[i]
             next_non_duplicate+=1
         i+=1
     return next_non_duplicate
