@@ -1,7 +1,7 @@
 #K = number of elemenet to find average of
 #arr = input numbers
 
-#METHOD 1 : IN EFFICIENT
+#METHOD 1.py : IN EFFICIENT
 def  find_averages_of_subarrays(K,arr):
     result = []
     #end sublist with fir index arr[4]. Range doesnot include arr[5]

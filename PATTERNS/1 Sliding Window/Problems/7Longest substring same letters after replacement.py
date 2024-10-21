@@ -1,6 +1,6 @@
 
 def length_longest_substring(str,k):
-    #1 intialization
+    #1.py intialization
     window_start = 0
     max_length = 0
     max_repeat_letter_count = 0

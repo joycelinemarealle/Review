@@ -1,5 +1,5 @@
 def longest_substring_with_distinct_characters(str,k):
-    #1 Initialization
+    #1.py Initialization
     window_start = 0
     max_length = 0
     char_freq = {}
@@ -25,7 +25,7 @@ def longest_substring_with_distinct_characters(str,k):
             #6 move ahead
             window_start +=1
 
-            # 8 max_length = max(max_length,window_end -window_start+1)
+            # 8 max_length = max(max_length,window_end -window_start+1.py)
         max_length = max(max_length, window_end - window_start + 1)
     return max_length
 

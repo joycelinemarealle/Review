@@ -15,7 +15,7 @@ expense1 = {
 print ("Monthly expenses",expense1)
 print()
 
-# 1 In Feb, how many dollars you spent extra compare to January?
+# 1.py In Feb, how many dollars you spent extra compare to January?
 amount = expense["Feb"] - expense["Jan"]
 print( "Spent $ in February ",amount, "than January")
 

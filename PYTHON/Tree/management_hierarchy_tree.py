@@ -44,7 +44,7 @@ def build_management_tree():
     #Level 0
     root = TreeNode("Nilupul", "(CEO")
 
-    #Level 1
+    #Level 1.py
     CTO = TreeNode("ChinMay", "(CTO)")
     HR = TreeNode ("Gel", "(HR Head)")
     root.add_child(CTO)

@@ -22,19 +22,19 @@ class Queue:
 
 def produce_binary_numbers(n):
     numbers_queue = Queue()
-    #add to queue 1 as str
-    numbers_queue.enqueue("1")
+    #add to queue 1.py as str
+    numbers_queue.enqueue("1.py")
 
-    #loop through numbers print front number and add 1 +0
+    #loop through numbers print front number and add 1.py +0
 
     for i in range(n):
-        #get 1 front number
+        #get 1.py front number
         front = numbers_queue.front()
         print("  ", front)
 
-        #concatenate front with 0 and 1 and add to queue
+        #concatenate front with 0 and 1.py and add to queue
         numbers_queue.enqueue((front) + "0")
-        numbers_queue.enqueue((front) + "1")
+        numbers_queue.enqueue((front) + "1.py")
 
        #remove first number so, second number used in the loop
         numbers_queue.dequeue()

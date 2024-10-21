@@ -38,7 +38,7 @@ if __name__ == '__main__':
     #(print(t.get_hash('march 6'))
     t['march 6'] = 130
     t['march 9'] = 500
-    t['augusut 1'] = 200
+    t['augusut 1.py'] = 200
     print(t.arr)
     print(t['march 6'])
     t.__delitem__('march 6')

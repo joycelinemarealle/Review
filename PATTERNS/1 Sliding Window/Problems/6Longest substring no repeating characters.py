@@ -1,5 +1,5 @@
 def longest_substring_no_repeating_characters(str):
-    #1 Initialization
+    #1.py Initialization
     window_start = 0
     max_length = 0
     char_freq ={} #empty dictionary to hold frequency
