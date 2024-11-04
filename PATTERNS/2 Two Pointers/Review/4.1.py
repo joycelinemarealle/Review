@@ -26,7 +26,7 @@ def search_pair(nums, target, left, triplets):
             right -= 1  # move backward since need unique
             while left < right and nums[left] == nums[left - 1]:  # ensures the triplets are unique
                 left += 1
-            while left < right and nums[right] == nums[right]:  # ensures the triplets are unique
+            while left < right and nums[right] == nums[right+1]:  # ensures the triplets are unique
                 right -= 1
         elif current_sum > target:
             left += 1

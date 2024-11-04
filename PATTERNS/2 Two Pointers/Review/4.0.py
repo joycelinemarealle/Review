@@ -18,7 +18,7 @@ def search_pair(arr,target_sum , left, triplets):
             #avoid duplicates
             while left< right and arr[left] == arr[left-1]:
                 left +=1
-            while left < right and arr[right] == arr[right-1]:
+            while left < right and arr[right] == arr[right+11]:
                 right +=1
         if current_sum < target_sum:
             left +=1
