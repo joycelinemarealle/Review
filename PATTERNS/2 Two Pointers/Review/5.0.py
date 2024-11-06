@@ -26,7 +26,7 @@ def triplets_close_to_target(arr, target_sum):
                 left +=1 # need triplet with bigger sum
             else:
                 right -=1 #need triplet with smaller sum
-    return target_sum - smallest_diff #the actual sum of numbers
+    return target_sum- smallest_diff #the actual sum of numbers
 
 if __name__ == '__main__':
     print(triplets_close_to_target([-2,0,1,2], 2))
