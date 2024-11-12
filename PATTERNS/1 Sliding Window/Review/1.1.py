@@ -1,17 +1,22 @@
 
 def aveg_sublist_size_k(arr, k):
-    total_sum = 0
-    for window_start in range (len(arr) -k):
-        for window_end in range(window_start,len(arr)-1):
-            total_sum += arr[window_end]
-            #shrink window when size > k
-            while window_end - window_start +1 == 5:
-                #find aveg
-                aveg = total_sum/k
-                # move the window_start ahead +=1
-                window_start +=1
+    window_sum = 0
+    window_start =0
+    aveg_array = []
 
-    return aveg
+    #slide window over array
+    for window_end in range(len(arr)):
+       window_sum += arr[window_end] #add next element
+       #shrink window when size > k
+       # shrink window when condition met
+       if window_end - window_start +1 >= k:
+            #find aveg
+            aveg = window_sum/k
+            aveg_array.append(aveg)
+            #remove first element and move the window_start ahead +=1
+            window_sum -= arr[window_start]
+            window_start +=1
+    return aveg_array
 
 if __name__ =='__main__':
     print(aveg_sublist_size_k([1,3,2,6,-1,4,1,8,2],5))
