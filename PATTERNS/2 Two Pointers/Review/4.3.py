@@ -44,6 +44,8 @@ def search_pair(arr,target_sum_pair, left, triplets):
             # if moved pointer and find duplicates skip
             while left < right and arr[left] == arr[left - 1]:
                 right -=1
+
+
         #if current sum  < target   move pointer forward
         if current_sum < target_sum_pair:
             left +=1
