@@ -3,7 +3,6 @@ def triplet_close_to_target(arr, target_sum):
     #sort the array
     arr.sort()
     smallest_difference = math.inf
-    closest_sum = 0
 
     for i in range (len(arr)-2):
         left = i+1 #start at second element
@@ -11,7 +10,7 @@ def triplet_close_to_target(arr, target_sum):
 
         while (left < right):
             current_sum = arr[i] + arr[left] + arr[right]
-            target_diff = target_sum - current_sum
+            target_diff = target_sum - (current_sum)
 
             if target_diff == 0: #we found a triplet with exact sum
                 return current_sum #sum of all numbers

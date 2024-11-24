@@ -16,7 +16,7 @@ def triplets_close_to_target(arr, target_sum):
 
             #compare difference between sums
             if target_diff == 0: #we found the triplet with exact target sum
-                return target_sum - target_diff
+                return current_sum
 
             #if multiple smallest sum return smallest
             if abs(target_diff) < abs(smallest_diff): #or abs(target_diff) == abs(smallest_diff):
