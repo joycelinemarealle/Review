@@ -4,6 +4,7 @@ class Node:
         self.next = next
         
 def find_cycle_start(head):
+   #fund linkedlist cycle
     cycle_length = 0
     slow, fast = head, head
     while fast is not None and fast.next is not None: #loop as long as fast node is not none or the next is not
@@ -22,7 +23,7 @@ def calculate_length_of_cycle(slow):
         cycle_length+=1 #keep track of counts to get length
         if slow == current: 
             break #brean loop then return counts == lenght of cycle
-        return cycle_length
+    return cycle_length
 
 def find_start(head, cycle_length):
     #two pointers start at same point
@@ -39,10 +40,6 @@ def find_start(head, cycle_length):
         pointer2 = pointer2.next
     return pointer1
 
-        
-        
-    return False
-
 def main ():
     head = Node(1)
     head.next = Node(2)
@@ -51,6 +48,7 @@ def main ():
     head.next.next.next.next = Node (5)
     head.next.next.next.next.next = Node(6)
     head.next.next.next.next.next = head.next.next
+    print ("Linkedlist starts at node"+ str(find_cycle_start(head).value))
     
 main()
 
