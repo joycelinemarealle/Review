@@ -11,7 +11,7 @@ def can_attend_all_appointments(intervals):
 
     #3 loop through intervals to find overlap
     for i in range(1, len(intervals)):
-        if intervals[i][0] < intervals[i-1][end]: #compare start of current to previous end to see overlap b.start < a.end
+        if intervals[i][start] < intervals[i-1][end]: #compare start of current to previous end to see overlap b.start < a.end
         # #"<" not "<=" comparision as we will be merging the two intervals having conditions #
         # #such interval not conflicting since appointment start right after the other
          return False
