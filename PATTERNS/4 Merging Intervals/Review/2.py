@@ -2,7 +2,7 @@ def insert(intervals, new_interval):
     merged_intervals = []
     # 1 initialization
     i,start,end = 0,0,1
-    merged_list = []
+    merged_list = [] //
     #2 Skip all intervals that come before new interval and add them to new merged list
     while i< len(intervals) and intervals[i][end] < new_interval[start]:
         #new interval overlapping
