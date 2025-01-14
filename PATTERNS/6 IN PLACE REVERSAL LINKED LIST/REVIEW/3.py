@@ -51,6 +51,7 @@ def reverse_every_k_elements(head, k):
 
         # 7 Break condition
         if current is None: #reached end of list exit loop
+             
             break
         previous = last_node_of_sublist
     return head
