@@ -1,0 +1,13 @@
+# EDGE ig root empty
+#if not leaf node
+    #find S= s-current node. value
+    #recurivsely call path sum function on both left and right child with new number calculated from previous step
+
+#Keep on checking if leaf node and S = to target sum
+    #return true
+
+#if leaf node and S!= target sum
+    #return false
+
+class TreeNode:
+    def __init))

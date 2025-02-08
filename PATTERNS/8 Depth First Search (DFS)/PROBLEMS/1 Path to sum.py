@@ -25,7 +25,7 @@ def has_path(root,sum):
     #If not lead node then call recursively function on both left and right child
     #recursive call to traverse left and right sub-tree
     #return true if any of recursive call returns true
-    return has_path(root.left, sum - root.value) or has_path((root.right) , sum - root.value)
+    return has_path(root.left, sum - root.value) or has_path(root.right, sum - root.value)
 
 def main ():
     root = TreeNode(12)
